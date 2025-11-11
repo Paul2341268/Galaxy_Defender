@@ -1,0 +1,125 @@
+canvas {
+    background: black;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid white;
+}
+
+/* (기존) 게임 오버 화면 스타일 */
+#gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 3px solid red;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 10; 
+}
+#gameOverScreen h1 { color: red; }
+#gameOverScreen p { font-size: 20px; margin: 15px 0; }
+#gameOverScreen button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: 2px solid white;
+    transition: background-color 0.2s;
+}
+#gameOverScreen button:hover { background-color: red; }
+
+.hidden {
+    display: none;
+}
+
+
+/* ⭐ [추가] 시작 화면 스타일 */
+#startScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 30px;
+    background: rgba(10, 20, 40, 0.9);
+    border: 3px solid cyan;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 20; /* 게임 오버 화면보다 위에 표시 */
+}
+#startScreen h1 {
+    color: cyan;
+    margin-bottom: 30px;
+}
+#startScreen button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #004d4d;
+    color: white;
+    border: 2px solid white;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+#startScreen button:hover {
+    background-color: #008080;
+}
+
+/* ⭐ [추가] 게임 설명 모달 스타일 */
+#descriptionModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid white;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 30; /* 가장 위에 표시 */
+}
+#descriptionModal h2 {
+    color: yellow;
+    text-align: center;
+}
+#descriptionModal ul {
+    list-style: none;
+    padding-left: 10px;
+}
+#descriptionModal li {
+    margin: 5px 0;
+}
+#descriptionModal button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: 1px solid white;
+}
+#descriptionModal button:hover {
+    background-color: #666;
+}
+/* 설명 모달 아이템 색상용 */
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+.dot.red { background-color: red; }
+.dot.blue { background-color: blue; }
+.dot.orange { background-color: orange; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Defender</title>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+    <div id="startScreen">
+        <h1>GALAXY DEFENDER</h1>
+        <button id="startButton">게임 시작</button>
+        <button id="descriptionButton">게임 설명</button>
+    </div>
+
+    <div id="descriptionModal" class="hidden">
+        <h2>게임 설명</h2>
+        <p><strong>이동:</strong> 화살표 키 (← / →) 또는 A / D</p>
+        <p><strong>발사:</strong> 스페이스바 (탭하여 발사)</p>
+        <p><strong>폭탄:</strong> Z 키</p>
+        <p><strong>일시정지:</strong> P 키</p>
+        <hr>
+        <p>최대한 오래 살아남으세요!</p>
+        <p>적을 처치하고 아이템을 획득하세요:</p>
+        <ul>
+            <li><span class="dot red"></span> 파워 업 (최대 5레벨)</li>
+            <li><span class="dot blue"></span> 폭탄 +1 (최대 3개)</li>
+            <li><span class="dot orange"></span> 점수 +10</li>
+        </ul>
+        <button id="closeDescriptionButton">닫기</button>
+    </div>
+
+    <div id="gameOverScreen" class="hidden">
+        <h1 id="gameOverTitle">GAME OVER</h1>
+        <p id="scoreMessage"></p> 
+        <p id="finalScore">Score: 0</p>
+        <button id="restartButton">RESTART</button>
+    </div>
+
+    <script src="js/game_objects.js"></script>
+    <script src="js/drawing_utils.js"></script>
+    <script src="js/collision_logic.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
